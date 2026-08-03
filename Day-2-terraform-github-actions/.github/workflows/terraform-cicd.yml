@@ -23,19 +23,15 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: Day-2-terraform-github-actions
         run: terraform init
 
       - name: Terraform Validate
-        working-directory: Day-2-terraform-github-actions
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: Day-2-terraform-github-actions
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
-        working-directory: Day-2-terraform-github-actions
         run: terraform apply -auto-approve tfplan
 
 
